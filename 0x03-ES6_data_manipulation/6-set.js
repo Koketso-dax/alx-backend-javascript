@@ -1,9 +1,9 @@
 /**
  * Creates a set from a list input.
- * @param {Array} list 
+ * @param {Array} list
  * @returns {Set} set from list.
  */
 
 export default function setFromArray(list) {
-    return new Set(list);
-  }
+  return new Set(list);
+}
