@@ -37,10 +37,14 @@ const countStudents = async (dataPath) => {
     studentGroups[field].push(Object.fromEntries(studentEntries));
   }
 
-  const reportParts = [`Number of students: ${Object.values(studentGroups).reduce((acc, group) => acc + group.length, 0)}`];
+  const reportParts = [
+    `Number of students: ${Object.values(studentGroups).reduce((acc,
+      group) => acc + group.length, 0)}`,
+  ];
 
   for (const [field, group] of Object.entries(studentGroups)) {
-    reportParts.push(`Number of students in ${field}: ${group.length}. List: ${group.map((student) => student.firstname).join(', ')}`);
+    reportParts.push(`Number of students in ${field}:
+      ${group.length}. List: ${group.map((student) => student.firstname).join(', ')}`);
   }
 
   return reportParts.join('\n');
