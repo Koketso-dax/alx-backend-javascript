@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 7865;
 
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json());
 
 app.get('/', (_, res) => {
   res.send('Welcome to the payment system');
