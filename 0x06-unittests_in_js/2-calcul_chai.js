@@ -5,6 +5,7 @@
  * @param {Number} b: second number
  * @returns {Number} result of the operation
  */
+
 function calculateNumber(type, a, b) {
   const aNum = Math.round(a);
   const bNum = Math.round(b);
